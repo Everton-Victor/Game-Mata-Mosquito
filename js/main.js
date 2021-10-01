@@ -20,7 +20,7 @@ function posicaoAleatoria() {
   // Criar elementos HTML
   var mosquito = document.createElement('img') // Cria uma tag img
   mosquito.src = './img/mosquito.png' // add o atributo src
-  mosquito.className = ajustarTamanhoAleatorio() // add uma class
+  mosquito.className = ajustarTamanhoAleatorio() + ' ' + inverterEixoAleatorio() // add uma class
   mosquito.style.left = posicaoX + 'px'
   mosquito.style.top = posicaoY + 'px'
   mosquito.style.position = 'absolute'
@@ -37,5 +37,16 @@ function ajustarTamanhoAleatorio() {
       return 'mosquito2'
     case 2:
       return 'mosquito3'
+  }
+}
+
+function inverterEixoAleatorio() {
+  var classe = Math.floor(Math.random() * 2)
+
+  switch (classe) {
+    case 0:
+      return 'ladoA'
+    case 1:
+      return 'ladoB'
   }
 }
