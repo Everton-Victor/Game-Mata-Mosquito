@@ -6,15 +6,13 @@ body {
   overflow: hidden;
 }
 
+html {
+  cursor: url(../img/mata_mosquito.png) 30 30, auto;
+}
+
 body {
   background: url(../img/bg.jpg) no-repeat;
   background-size: cover;
-}
-
-.mosquito1,
-.mosquito2,
-.mosquito3 {
-  cursor: pointer;
 }
 
 .mosquito1 {
