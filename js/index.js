@@ -5,6 +5,6 @@ function iniciarJogo() {
     alert('Selecione um nível para iniciar um jogo')
     return false
   } else {
-    alert(nivel)
+    window.location.href = '../app.html?' + nivel // Passa como parametro
   }
 }

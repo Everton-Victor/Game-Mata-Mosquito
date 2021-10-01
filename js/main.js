@@ -3,6 +3,23 @@ var largura = 0
 var vidas = 1
 var tempo = 10
 
+var criaMosquitoTempo = 1500
+
+var nivel = window.location.search // Captura apenas o parametro da url
+nivel = nivel.replace('?', '')
+
+switch (nivel) {
+  case 'normal':
+    criaMosquitoTempo = 1500
+    break
+  case 'dificil':
+    criaMosquitoTempo = 1000
+    break
+  case 'pro':
+    criaMosquitoTempo = 750
+    break
+}
+
 const ajustarTamanhoPalcoJogo = () => {
   altura = screen.availHeight
   largura = screen.availWidth
