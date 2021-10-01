@@ -20,9 +20,22 @@ function posicaoAleatoria() {
   // Criar elementos HTML
   var mosquito = document.createElement('img') // Cria uma tag img
   mosquito.src = './img/mosquito.png' // add o atributo src
-  mosquito.className = 'mosquito1' // add uma class
+  mosquito.className = ajustarTamanhoAleatorio() // add uma class
   mosquito.style.left = posicaoX + 'px'
   mosquito.style.top = posicaoY + 'px'
   mosquito.style.position = 'absolute'
   document.body.appendChild(mosquito) // add no body
+}
+
+function ajustarTamanhoAleatorio() {
+  var classe = Math.floor(Math.random() * 3)
+
+  switch (classe) {
+    case 0:
+      return 'mosquito1'
+    case 1:
+      return 'mosquito2'
+    case 2:
+      return 'mosquito3'
+  }
 }
