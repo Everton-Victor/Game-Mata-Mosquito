@@ -1,6 +1,7 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 10
 
 const ajustarTamanhoPalcoJogo = () => {
   altura = screen.availHeight
@@ -8,6 +9,18 @@ const ajustarTamanhoPalcoJogo = () => {
 }
 
 ajustarTamanhoPalcoJogo()
+
+var cronometro = setInterval(function () {
+  tempo--
+
+  if (tempo < 0) {
+    clearInterval(cronometro)
+    clearInterval(criarMosquito)
+    window.location.href = 'vitoria.html'
+  } else {
+    document.getElementById('cronometro').innerHTML = tempo
+  }
+}, 1000)
 
 function posicaoAleatoria() {
   // remover o mosquito anterior caso existe
