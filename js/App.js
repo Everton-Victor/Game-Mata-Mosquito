@@ -2,7 +2,6 @@ var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 10
-
 var criaMosquitoTempo = 1500
 
 var nivel = window.location.search // Captura apenas o parametro da url
@@ -27,7 +26,7 @@ const ajustarTamanhoPalcoJogo = () => {
 
 ajustarTamanhoPalcoJogo()
 
-var cronometro = setInterval(function () {
+var cronometro = setInterval(() => {
   tempo--
 
   if (tempo < 0) {
@@ -39,7 +38,7 @@ var cronometro = setInterval(function () {
   }
 }, 1000)
 
-function posicaoAleatoria() {
+const posicaoAleatoria = () => {
   // remover o mosquito anterior caso existe
   if (document.getElementById('mosquito')) {
     document.getElementById('mosquito').remove()
@@ -76,7 +75,7 @@ function posicaoAleatoria() {
   }
 }
 
-function ajustarTamanhoAleatorio() {
+const ajustarTamanhoAleatorio = () => {
   var classe = Math.floor(Math.random() * 3)
 
   switch (classe) {
@@ -89,7 +88,7 @@ function ajustarTamanhoAleatorio() {
   }
 }
 
-function inverterEixoAleatorio() {
+const inverterEixoAleatorio = () => {
   var classe = Math.floor(Math.random() * 2)
 
   switch (classe) {
