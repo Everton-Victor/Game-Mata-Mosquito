@@ -1,5 +1,5 @@
 const iniciarJogo = () => {
-  var nivel = document.getElementById('nivel').value
+  let nivel = document.getElementById('nivel').value
 
   if (nivel === '') {
     alert('Selecione um nível para iniciar um jogo')

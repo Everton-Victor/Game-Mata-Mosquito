@@ -1,10 +1,10 @@
-var altura = 0
-var largura = 0
-var vidas = 1
-var tempo = 10
-var criaMosquitoTempo = 1500
+let altura = 0
+let largura = 0
+let vidas = 1
+let tempo = 10
+let criaMosquitoTempo = 1500
 
-var nivel = window.location.search // Captura apenas o parametro da url
+let nivel = window.location.search // Captura apenas o parametro da url
 nivel = nivel.replace('?', '')
 
 switch (nivel) {
@@ -26,7 +26,7 @@ const ajustarTamanhoPalcoJogo = () => {
 
 ajustarTamanhoPalcoJogo()
 
-var cronometro = setInterval(() => {
+const cronometro = setInterval(() => {
   tempo--
 
   if (tempo < 0) {
@@ -51,8 +51,8 @@ const posicaoAleatoria = () => {
     }
   }
 
-  var posicaoX = Math.floor(Math.random() * largura) - 90
-  var posicaoY = Math.floor(Math.random() * altura) - 90
+  let posicaoX = Math.floor(Math.random() * largura) - 90
+  let posicaoY = Math.floor(Math.random() * altura) - 90
 
   posicaoX = posicaoX < 0 ? 0 : posicaoX
   posicaoY = posicaoY < 0 ? 0 : posicaoY
@@ -61,7 +61,7 @@ const posicaoAleatoria = () => {
   console.log(posicaoY, posicaoX)
 
   // Criar elementos HTML
-  var mosquito = document.createElement('img') // Cria uma tag img
+  let mosquito = document.createElement('img') // Cria uma tag img
   mosquito.src = './img/mosquito.png' // add o atributo src
   mosquito.className = ajustarTamanhoAleatorio() + ' ' + inverterEixoAleatorio() // add uma class
   mosquito.style.left = posicaoX + 'px'
@@ -76,7 +76,7 @@ const posicaoAleatoria = () => {
 }
 
 const ajustarTamanhoAleatorio = () => {
-  var classe = Math.floor(Math.random() * 3)
+  let classe = Math.floor(Math.random() * 3)
 
   switch (classe) {
     case 0:
@@ -89,7 +89,7 @@ const ajustarTamanhoAleatorio = () => {
 }
 
 const inverterEixoAleatorio = () => {
-  var classe = Math.floor(Math.random() * 2)
+  let classe = Math.floor(Math.random() * 2)
 
   switch (classe) {
     case 0:
